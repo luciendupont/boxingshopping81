@@ -31,7 +31,7 @@ class Client
     private ?string $ville_client = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $mail_lcient = null;
+    private ?string $mail_client = null;
 
     #[ORM\OneToMany(mappedBy: 'client', targetEntity: Facture::class)]
     private Collection $factures;
@@ -106,14 +106,14 @@ class Client
         return $this;
     }
 
-    public function getMailLcient(): ?string
+    public function getMailClient(): ?string
     {
-        return $this->mail_lcient;
+        return $this->mail_client;
     }
 
-    public function setMailLcient(string $mail_lcient): static
+    public function setMailClient(string $mail_client): static
     {
-        $this->mail_lcient = $mail_lcient;
+        $this->mail_client = $mail_client;
 
         return $this;
     }

@@ -19,8 +19,7 @@ class Categorie
     #[ORM\Column(length: 255)]
     private ?string $image_article = null;
 
-    #[ORM\ManyToOne(inversedBy: 'categories')]
-    private ?Article $article = null;
+
 
     public function getId(): ?int
     {
@@ -49,17 +48,6 @@ class Categorie
         $this->image_article = $image_article;
 
         return $this;
-    }
-
-    public function getArticle(): ?Article
-    {
-        return $this->article;
-    }
-
-    public function setArticle(?Article $article): static
-    {
-        $this->article = $article;
-
-        return $this;
+   
     }
 }
