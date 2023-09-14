@@ -37,15 +37,33 @@
             <button type="button" class="btn btn-light" li class="nav-item">
               <a class="nav-link" href="{{path("app_index")}}">ACCUEIL</a></button>
 
+            
 
-            <button type="button" class="btn btn-light" li class="nav-item">
-              <a class="nav-link" href="{{path("app_equipement")}}">ÉQUIPEMENT</a></button>
+              <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <a href="{{path("app_equipement")}}" class="btn btn-light">ÉQUIPEMENT</a>
+                <div class="btn-group" role="group">
+                  <button id="btnGroupDrop2" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                  <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                    <a class="dropdown-item" href="{{path("app_gant")}}">gant</a>
+                    <a class="dropdown-item" href="{{path("app_short")}}">short</a>
+                    <a class="dropdown-item" href="{{path("app_chaussure")}}">chaussure</a>
+                  </div>
+                </div>
+              </div>
 
-            <button type="button" class="btn btn-light" li class="nav-item">
-              <a class="nav-link" href="{{path("app_protection")}}">PROTECTION</a></button>
 
-
-            <button type="button" class="btn btn-light" li class="nav-item">
+              <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <a href="{{path("app_protection")}}" class="btn btn-light">PROTECTION</a>
+                <div class="btn-group" role="group">
+                  <button id="btnGroupDrop2" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                  <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                    <a class="dropdown-item" href="{{path("app_casque")}}">casque</a>
+                    <a class="dropdown-item" href="{{path("app_protegedent")}}">protegedent</a>
+                    <a class="dropdown-item" href="{{path("app_coquille")}}">coquille</a>
+                  </div>
+                </div>
+              </div>
+<button type="button" class="btn btn-light" li class="nav-item">
               <a class="nav-link" href="{{path("app_register")}}">S'INSCRIRE</a></button>
 
 
