@@ -473,7 +473,7 @@ class AppFixtures extends Fixture
               ->setMarqueArticle('nike')
               ->setPrixArticle('189.00')
               ->setImageArticle('ch2.jpg');
-        $manager->persist($article);
+        $manager->persist($article9);
 
         $article10 = new Article();
         $article10->setNomArticle('chaussure3')
@@ -516,7 +516,7 @@ class AppFixtures extends Fixture
         $manager->persist($article14);
 
         $article15 = new Article();
-        $article15->setNomArticle('casque_4')
+        $article15->setNomArticle('casque4')
               ->setDescriptionArticle('casque_adidas')
               ->setMarqueArticle('adidas')
               ->setPrixArticle('79.00')
@@ -524,7 +524,7 @@ class AppFixtures extends Fixture
         $manager->persist($article15);
 
         $article16 = new Article();
-        $article16->setNomArticle('protge_dent_1')
+        $article16->setNomArticle('protegedent1')
               ->setDescriptionArticle('protege_dent_enfant')
               ->setMarqueArticle('shockdoctor')
               ->setPrixArticle('7.95')
@@ -532,7 +532,7 @@ class AppFixtures extends Fixture
         $manager->persist($article16);
 
         $article17 = new Article();
-        $article17->setNomArticle('peotege_dent2')
+        $article17->setNomArticle('protegedent2')
               ->setDescriptionArticle('protege_dent_adulte')
               ->setMarqueArticle('shockdoctor')
               ->setPrixArticle('9.95')
@@ -540,7 +540,7 @@ class AppFixtures extends Fixture
         $manager->persist($article17);
 
         $article18 = new Article();
-        $article18->setNomArticle('protege_dent3')
+        $article18->setNomArticle('protegedent3')
               ->setDescriptionArticle('protege_dent_bleu_evol')
               ->setMarqueArticle('shockdoctor')
               ->setPrixArticle('28395')
@@ -548,8 +548,8 @@ class AppFixtures extends Fixture
         $manager->persist($article18);
 
         $article19 = new Article();
-        $article19->setNomArticle('protege_dent4')
-              ->setDescriptionArticle('protege_dent_noir')
+        $article19->setNomArticle('protegedent4')
+              ->setDescriptionArticle('protegedent_noir')
               ->setMarqueArticle('shockdoctor')
               ->setPrixArticle('14.90')
               ->setImageArticle('pd4.jpg');
@@ -580,7 +580,7 @@ class AppFixtures extends Fixture
         $manager->persist($article22);
 
         $article23 = new Article();
-        $article23->setNomArticle('coquille_4')
+        $article23->setNomArticle('coquille4')
               ->setDescriptionArticle('coquillle_adidas_pro')
               ->setMarqueArticle('adidas')
               ->setPrixArticle('79.90')
