@@ -589,42 +589,50 @@ class AppFixtures extends Fixture
 
         $categorie = new Categorie();
         $categorie->setNomCategorie('equipement')
-              ->setImageArticle('1.jpg');
+              ->setImageArticle('1.jpg')
+              ->setTotal(6);
         $manager->persist($categorie);
 
         $categorie1 = new Categorie();
         $categorie1->setNomCategorie('protection')
-                   ->setImageArticle('2.jpg');
+                   ->setImageArticle('2.jpg')
+                   ->setTotal(6);
         $manager->persist($categorie1);
 
         $categorie2 = new Categorie();
         $categorie2->setNomCategorie('gant')
-                    ->setImageArticle('3.jpg');
+                    ->setImageArticle('3.jpg')
+                    ->setTotal(6);
         $manager->persist($categorie2);
 
         $categorie3 = new Categorie();
         $categorie3->setNomCategorie('short')
-        ->setImageArticle('4.jpg');
+        ->setImageArticle('4.jpg')
+        ->setTotal(6);
         $manager->persist($categorie3);
 
         $categorie4 = new Categorie();
         $categorie4->setNomCategorie('chaussure')
-        ->setImageArticle('5.jpg');
+        ->setImageArticle('5.jpg')
+        ->setTotal(6);
         $manager->persist($categorie4);
 
         $categorie5 = new Categorie();
         $categorie5->setNomCategorie('casque')
-        ->setImageArticle('6.jpg');
+        ->setImageArticle('6.jpg')
+        ->setTotal(6);
         $manager->persist($categorie5);
 
         $categorie6 = new Categorie();
         $categorie6->setNomCategorie('protege_dent')
-        ->setImageArticle('7.jpg');
+        ->setImageArticle('7.jpg')
+        ->setTotal(6);
         $manager->persist($categorie6);
 
         $categorie7 = new Categorie();
         $categorie7->setNomCategorie('coquille')
-        ->setImageArticle('8.jpg');
+        ->setImageArticle('8.jpg')
+        ->setTotal(6);
         $manager->persist($categorie7);
 
         $fournisseur = new Fournisseur();

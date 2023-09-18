@@ -8,6 +8,7 @@ use App\Repository\ArticleRepository;
 use App\Repository\CategorieRepository;
 use App\Service\CarteService;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\Repository\Exception\InvalidFindByCall;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,7 +21,7 @@ class CarteController extends AbstractController
     public function index(CarteService $cartService): Response
     {
         return $this->render('carte/index.html.twig', [
-            'cart' => $cartService->getTotal()
+            'carte' => $cartService->getTotal()
         ]);
     }
 

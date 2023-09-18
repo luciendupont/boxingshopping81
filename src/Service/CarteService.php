@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use App\Entity\Article;
 use App\Entity\Categorie;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -59,12 +60,12 @@ class CarteService {
         $cartData = [];
         if ($carte) {
             foreach ($carte as $id => $quantite) {
-                $categorie = $this->em->getRepository(Categorie::class)->findOneBy(['id' => $id]);
-                if (!$categorie) {
+                $article = $this->em->getRepository(Article::class)->findOneBy(['id' => $id]);
+                if (!$article) {
                     // Supprimer le produit puis continuer en sortant de la boucle
                 }
                 $cartData[] = [
-                    'categorie' => $categorie,
+                    'article' => $article,
                     'quantite' => $quantite
                 ];
             }

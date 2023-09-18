@@ -19,6 +19,9 @@ class Categorie
     #[ORM\Column(length: 255)]
     private ?string $image_article = null;
 
+    #[ORM\Column]
+    private ?int $total = null;
+
 
 
     public function getId(): ?int
@@ -49,5 +52,17 @@ class Categorie
 
         return $this;
    
+    }
+
+    public function getTotal(): ?int
+    {
+        return $this->total;
+    }
+
+    public function setTotal(int $total): static
+    {
+        $this->total = $total;
+
+        return $this;
     }
 }
