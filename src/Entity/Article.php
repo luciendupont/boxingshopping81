@@ -120,27 +120,7 @@ class Article
         return $this->categories;
     }
 
-    public function addCategory(Categorie $category): static
-    {
-        if (!$this->categories->contains($category)) {
-            $this->categories->add($category);
-            $category->setArticle($this);
-        }
 
-        return $this;
-    }
-
-    public function removeCategory(Categorie $category): static
-    {
-        if ($this->categories->removeElement($category)) {
-            // set the owning side to null (unless already changed)
-            if ($category->getArticle() === $this) {
-                $category->setArticle(null);
-            }
-        }
-
-        return $this;
-    }
 
     /**
      * @return Collection<int, Fourni>
@@ -150,7 +130,7 @@ class Article
         return $this->fournis;
     }
 
-    public function addFourni(Fourni $fourni): static
+    public function addFourni(Fourni $fourni): static   
     {
         if (!$this->fournis->contains($fourni)) {
             $this->fournis->add($fourni);

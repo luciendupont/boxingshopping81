@@ -11,16 +11,17 @@
 
   {% endblock %}
   <link rel="stylesheet" href="https://bootswatch.com/5/zephyr/bootstrap.css">
-<link rel="stylesheet" href="LOGO/1.css">
+<link rel="stylesheet" href="boxe/1.css">
 
   {% block javascripts %}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script> {% endblock %}
+    crossorigin="anonymous"></script> 
+ 
+    {% endblock %}
 </head>
 
 <body>
-
   {% block header %}
 
   <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
@@ -38,7 +39,9 @@
               <div class="btn-group" role="group">
                 <button id="btnGroupDrop2" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
-        
+                  <a class="dropdown-item" href=""></a>
+                  <a class="dropdown-item" href=""></a>
+                  <a class="dropdown-item" href=""></a>
                 </div>
               </div>
             </div>
@@ -46,7 +49,7 @@
               <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                 <a href="{{path("app_equipement")}}" class="btn btn-light">ÉQUIPEMENT</a>
                 <div class="btn-group" role="group">
-                  <button id="btnGroupDrop2" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                  <button id="btnGroupDrophttps://releases.jquery.com/git/ui/jquery-ui-git.js2" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                   <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
                     <a class="dropdown-item" href="{{path("app_gant")}}">gant</a>
                     <a class="dropdown-item" href="{{path("app_short")}}">short</a>
@@ -67,9 +70,19 @@
                   </div>
                 </div>
               </div>
-<button type="button" class="btn btn-light" li class="nav-item">
-              <a class="nav-link" href="{{path("app_register")}}">S'INSCRIRE</a></button>
 
+              <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <a href="{{path("app_contact")}}" class="btn btn-light">ESPACE MEMBRES</a>
+                <div class="btn-group" role="group">
+                  <button id="btnGroupDrop2" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                  <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                    <a class="dropdown-item" href="{{path("app_register")}}">S'ENREGISTRER</a>
+                    <a class="dropdown-item" href="">a</a>
+                    <a class="dropdown-item" href="{{path("app_carte")}}">coommande
+                    </a>
+                  </div>
+                </div>
+              </div>
 
   </nav>
   <form class="d-flex">

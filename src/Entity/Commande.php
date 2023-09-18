@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\CommandeRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CommandeRepository::class)]
@@ -29,6 +30,18 @@ class Commande
 
     #[ORM\OneToMany(mappedBy: 'commande', targetEntity: Contient::class)]
     private Collection $contients;
+
+    #[ORM\Column(type: Types::DECIMAL, precision: 7, scale: 2)]
+    private ?string $total = null;
+
+    #[ORM\Column]
+    private ?int $etat = null;
+
+    #[ORM\ManyToOne(inversedBy: 'commandes')]
+    private ?Detail $detail = null;
+
+    #[ORM\ManyToOne(inversedBy: 'commandes')]
+    private ?User $user = null;
 
     public function __construct()
     {
@@ -117,4 +130,55 @@ class Commande
 
         return $this;
     }
+
+    public function getTotal(): ?string
+    {
+        return $this->total;
+    }
+
+    public function setTotal(string $total): static
+    {
+        $this->total = $total;
+
+        return $this;
+    }
+
+    public function getEtat(): ?int
+    {
+        return $this->etat;
+    }
+
+    public function setEtat(int $etat): static
+    {
+        $this->etat = $etat;
+
+        return $this;
+    }
+
+    public function getDetail(): ?Detail
+    {
+        return $this->detail;
+    }
+
+    public function setDetail(?Detail $detail): static
+    {
+        $this->detail = $detail;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+
+
 }

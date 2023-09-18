@@ -618,7 +618,7 @@ class AppFixtures extends Fixture
         $manager->persist($categorie5);
 
         $categorie6 = new Categorie();
-        $categorie6->setNomCategorie('proteg_dent')
+        $categorie6->setNomCategorie('protege_dent')
         ->setImageArticle('7.jpg');
         $manager->persist($categorie6);
 
@@ -697,7 +697,9 @@ class AppFixtures extends Fixture
         $commande = new Commande();
         $commande->setNomCommande('dupont')
                  ->setDateCommande(new \DateTimeImmutable())
-                 ->setDescriptionCommande('gant,casque');
+                 ->setDescriptionCommande('gant,casque')
+                 ->setTotal(124.32)
+                 ->setEtat(3);
                  $manager->persist($commande);
 
 
