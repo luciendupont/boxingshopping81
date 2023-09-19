@@ -74,9 +74,9 @@ class CarteController extends AbstractController
 
     #[Route('/mon-panier/decrease/{id<\d+>}', name: 'app_carte_decrease')]
 
-    public function decrease(CarteService $cartService, int $id): RedirectResponse
+    public function decrease(CarteService $carteService, int $id): RedirectResponse
     {
-        $cartService->decrease($id);
+        $carteService->decrease($id);
         return $this->redirectToRoute('app_carte');
     }
 

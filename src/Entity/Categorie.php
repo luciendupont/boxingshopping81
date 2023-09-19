@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CategorieRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CategorieRepository::class)]
@@ -19,8 +21,21 @@ class Categorie
     #[ORM\Column(length: 255)]
     private ?string $image_article = null;
 
-    #[ORM\Column]
-    private ?int $total = null;
+
+    #[ORM\ManyToOne(targetEntity: self::class, inversedBy: 'categories')]
+    private ?self $categorie = null;
+
+    #[ORM\OneToMany(mappedBy: 'categorie', targetEntity: self::class)]
+    private Collection $categories;
+
+    #[ORM\OneToMany(mappedBy: 'categorie', targetEntity: Article::class)]
+    private Collection $article;
+
+    public function __construct()
+    {
+        $this->categories = new ArrayCollection();
+        $this->article = new ArrayCollection();
+    }
 
 
 
@@ -49,20 +64,87 @@ class Categorie
     public function setImageArticle(string $image_article): static
     {
         $this->image_article = $image_article;
+        {
+            return $this;
+        }
+    
 
         return $this;
    
     }
 
-    public function getTotal(): ?int
+
+    public function getCategorie(): ?self
     {
-        return $this->total;
+        return $this->categorie;
     }
 
-    public function setTotal(int $total): static
+    public function setCategorie(?self $categorie): static
     {
-        $this->total = $total;
+        $this->categorie = $categorie;
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, self>
+     */
+    public function getCategories(): Collection
+    {
+        return $this->categories;
+    }
+
+    public function addCategory(self $category): static
+    {
+        if (!$this->categories->contains($category)) {
+            $this->categories->add($category);
+            $category->setCategorie($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCategory(self $category): static
+    {
+        if ($this->categories->removeElement($category)) {
+            // set the owning side to null (unless already changed)
+            if ($category->getCategorie() === $this) {
+                $category->setCategorie(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Article>
+     */
+    public function getArticle(): Collection
+    {
+        return $this->article;
+    }
+
+    public function addArticle(Article $article): static
+    {
+        if (!$this->article->contains($article)) {
+            $this->article->add($article);
+            $article->setCategorie($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArticle(Article $article): static
+    {
+        if ($this->article->removeElement($article)) {
+            // set the owning side to null (unless already changed)
+            if ($article->getCategorie() === $this) {
+                $article->setCategorie(null);
+            }
+        }
+
+        return $this;
+    }
+
+    
 }

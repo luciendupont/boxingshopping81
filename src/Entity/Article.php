@@ -40,6 +40,9 @@ class Article
     #[ORM\OneToMany(mappedBy: 'article', targetEntity: Contient::class)]
     private Collection $contients;
 
+    #[ORM\ManyToOne(inversedBy: 'article')]
+    private ?Categorie $categorie = null;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -178,6 +181,18 @@ class Article
                 $contient->setArticle(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCategorie(): ?Categorie
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?Categorie $categorie): static
+    {
+        $this->categorie = $categorie;
 
         return $this;
     }

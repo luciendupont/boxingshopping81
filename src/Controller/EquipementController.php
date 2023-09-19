@@ -11,13 +11,15 @@ use Symfony\Component\Routing\Annotation\Route;
 class EquipementController extends AbstractController
 {
     #[Route('/equipement', name: 'app_equipement')]
-    public function index( ArticleRepository $articleRepository): Response
+    public function index( ArticleRepository $articleRepository ,CategorieRepository $categorieRepository ): Response
     {
-    $art=$articleRepository->findAll();
+        $cat=$categorieRepository->findBy(['id' => 3]);
+        $cat1=$categorieRepository->findBy(['id' => 4]);
+        $cat2=$categorieRepository->findBy(['id' => 5]);
 
 
         return $this->render('equipement/index.html.twig', [
-           'arts'=>$art
+            'cats'=>$cat,'cats1'=>$cat1,'cats2'=>$cat2
         ]);
     }
 }
