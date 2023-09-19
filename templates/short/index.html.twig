@@ -3,6 +3,10 @@
 {% block title %}Hello ShortController!{% endblock %}
 
 {% block body %}
+<div class="container">
+  <div class="row">
+
+  
 {% for short in shorts %}
         <div class="col-lg-4 my-2 d-flex justify-content-center">
             <div class="card border-dark mb-3" style="auto: 20rem;">
@@ -18,6 +22,7 @@
         </div>
         </div>
 
-
+</div>
+</div>
         {% endfor %}
 {% endblock %}
