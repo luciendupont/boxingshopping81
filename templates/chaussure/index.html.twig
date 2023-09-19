@@ -3,18 +3,21 @@
 {% block title %}Hello ChaussureController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% for chaussure in chaussures %}
+        <div class="col-lg-4 my-2 d-flex justify-content-center">
+            <div class="card border-dark mb-3" style="auto: 20rem;">
+                <div class="card-header">{{chaussure.nomArticle}}</div>
+                <img src="boxe/chaussure/{{chaussure.imageArticle}}" alt="" width="100">
+                <div class="card-body">
+                  <h4 class="card-title">{{chaussure.descriptionArticle}}</h4>
+                  <p class="card-text"></p>
+                  <button type="button" class="btn btn-light" li class="nav-item">
+                    <a class="nav-link" href="{{path('app_short')}}">commandez </a></button>
+      
+                </div>
+        </div>
+        </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/lucien/Bureau/CDA/boxingshopping81/src/Controller/ChaussureController.php'|file_link(0) }}">src/Controller/ChaussureController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/lucien/Bureau/CDA/boxingshopping81/templates/chaussure/index.html.twig'|file_link(0) }}">templates/chaussure/index.html.twig</a></code></li>
-    </ul>
-</div>
+        {% endfor %}
 {% endblock %}

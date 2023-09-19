@@ -23,8 +23,8 @@ class AppFixtures extends Fixture
                   ->setEmail('lucienluludupont@gmail.com')
                   ->setTelephone('0610041848')
                   ->setPassword(password_hash('Amiens80', PASSWORD_DEFAULT))
-                  ->setRoles(['ROLE_ADMIN', 'ROLE_USER'])
-                  ->setAdresse('7 mail rogersalengro apt 55')
+                  ->setRoles(['ROLE_ADMIN', 'ROLEUSER'])
+                  ->setAdresse('7 mail roger salengro apt 55')
                   ->setCp('80090')
                   ->setVille('Amiens');
             $manager->persist($user);
@@ -102,35 +102,11 @@ class AppFixtures extends Fixture
                   ->setVille('Lutetia');
             $manager->persist($user6);
 
-            $user7 = new User();
-            $user7->setPrenom('Carlos')
-                  ->setNom('dupont')
-                  ->setEmail('carlos@gmail.com')
-                  ->setTelephone('7401456980')
-                  ->setPassword(password_hash('password', PASSWORD_DEFAULT))
-                  ->setRoles(['ROLE_USER'])
-                  ->setAdresse('2969 Hartland Avenue')
-                  ->setCp('13000')
-                  ->setVille('Massalia');
-            $manager->persist($user7);
-
-            $user8 = new User();
-            $user8->setPrenom('Jonathan')
-                  ->setNom('dupont')
-                  ->setEmail('jonathan@gmail.com')
-                  ->setTelephone('7410256996')
-                  ->setPassword(password_hash('password', PASSWORD_DEFAULT))
-                  ->setRoles(['ROLE_USER'])
-                  ->setAdresse('1959 Limer Street')
-                  ->setCp('80000')
-                  ->setVille('Samarobriva');
-            $manager->persist($user8);
-
 
             $client = new Client();
             $client->setNomClient('dupont')
                   ->setPrenomClient('jean')
-                  ->setAdresseClient('1_mail_roger_salengro')
+                  ->setAdresseClient('1 mail roger salengro')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('dupontjean@gmail.com');
@@ -139,7 +115,7 @@ class AppFixtures extends Fixture
             $client1 = new Client();
             $client1->setNomClient('dupont')
                   ->setPrenomClient('pierre')
-                  ->setAdresseClient('2_mail_roger_salengro')
+                  ->setAdresseClient('2 mail roger salengro')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('pierredupont@gmail.com');
@@ -148,7 +124,7 @@ class AppFixtures extends Fixture
             $client2 = new Client();
             $client2->setNomClient('dupont')
                   ->setPrenomClient('lucien')
-                  ->setAdresseClient('3_mail_roger_salengro')
+                  ->setAdresseClient('3 mail roger salengro')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('dupontlucien@gmail.com');
@@ -157,7 +133,7 @@ class AppFixtures extends Fixture
             $client3 = new Client();
             $client3->setNomClient('dupont')
                   ->setPrenomClient('luc')
-                  ->setAdresseClient('1_rue victorine_autier')
+                  ->setAdresseClient('1 rue victorine autier')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('ldupont@gmail.com');
@@ -166,7 +142,7 @@ class AppFixtures extends Fixture
             $client4 = new Client();
             $client4->setNomClient('dupont')
                   ->setPrenomClient('louis')
-                  ->setAdresseClient('11_rue _victorine _autier')
+                  ->setAdresseClient('11 rue victorine autier')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('lodupont@gmail.com');
@@ -175,7 +151,7 @@ class AppFixtures extends Fixture
             $client5 = new Client();
             $client5->setNomClient('dupont')
                   ->setPrenomClient('andre')
-                  ->setAdresseClient('2_rue victorine_autier')
+                  ->setAdresseClient('2 rue victorine autier')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('andredupont@gmail.com');
@@ -184,7 +160,7 @@ class AppFixtures extends Fixture
             $client = new Client();
             $client->setNomClient('dupont')
                   ->setPrenomClient('michel')
-                  ->setAdresseClient('3_rue_victorine_autier')
+                  ->setAdresseClient('3 rue victorine autier')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('dupontmichel@gmail.com');
@@ -194,7 +170,7 @@ class AppFixtures extends Fixture
             $client1 = new Client();
             $client1->setNomClient('dupont')
                   ->setPrenomClient('pierre')
-                  ->setAdresseClient('2_mail_roger_salengro')
+                  ->setAdresseClient('2 mail roger salengro')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('pierredupont@gmail.com');
@@ -203,7 +179,7 @@ class AppFixtures extends Fixture
             $client2 = new Client();
             $client2->setNomClient('dupont')
                   ->setPrenomClient('lucien')
-                  ->setAdresseClient('3_mail_roger_salengro')
+                  ->setAdresseClient('3 mail roger salengro')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('dupontlucien@gmail.com');
@@ -212,7 +188,7 @@ class AppFixtures extends Fixture
             $client3 = new Client();
             $client3->setNomClient('dupont')
                   ->setPrenomClient('luc')
-                  ->setAdresseClient('1_rue victorine_autier')
+                  ->setAdresseClient('1 rue victorine autier')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('ldupont@gmail.com');
@@ -221,7 +197,7 @@ class AppFixtures extends Fixture
             $client4 = new Client();
             $client4->setNomClient('dupont')
                   ->setPrenomClient('louis')
-                  ->setAdresseClient('11_rue _victorine _autier')
+                  ->setAdresseClient('11 rue  victorine  autier')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('lodupont@gmail.com');
@@ -230,7 +206,7 @@ class AppFixtures extends Fixture
             $client5 = new Client();
             $client5->setNomClient('dupont')
                   ->setPrenomClient('andre')
-                  ->setAdresseClient('2_rue victorine_autier')
+                  ->setAdresseClient('2 rue victorine autier')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('andredupont@gmail.com');
@@ -241,7 +217,7 @@ class AppFixtures extends Fixture
             $client6 = new Client();
             $client6->setNomClient('dupont')
                   ->setPrenomClient('jacqueline')
-                  ->setAdresseClient('11_mail_roger_salengro')
+                  ->setAdresseClient('11 mail roger salengro')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('dupontjacqueline@gmail.com');
@@ -250,7 +226,7 @@ class AppFixtures extends Fixture
             $client7 = new Client();
             $client7->setNomClient('dupont')
                   ->setPrenomClient('joelle')
-                  ->setAdresseClient('12_mail_roger_salengro')
+                  ->setAdresseClient('12 mail roger salengro')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('dupontjoelle@gmail.com');
@@ -259,7 +235,7 @@ class AppFixtures extends Fixture
             $client8 = new Client();
             $client8->setNomClient('dupont')
                   ->setPrenomClient('joel')
-                  ->setAdresseClient('13_mail_roger_salengro')
+                  ->setAdresseClient('13 mail roger salengro')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('dupontjoel@gmail.com');
@@ -268,7 +244,7 @@ class AppFixtures extends Fixture
             $client9 = new Client();
             $client9->setNomClient('dupont')
                   ->setPrenomClient('thierry')
-                  ->setAdresseClient('15_mail_roger_salengro')
+                  ->setAdresseClient('15 mail roger salengro')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('tdupont@gmail.com');
@@ -277,7 +253,7 @@ class AppFixtures extends Fixture
             $client10 = new Client();
             $client10->setNomClient('dupont')
                   ->setPrenomClient('edouard')
-                  ->setAdresseClient('14_mail_roger_salengro')
+                  ->setAdresseClient('14 mail roger salengro')
                   ->setCodePostalClient('80090')
                   ->setVilleClient('amiens')
                   ->setMailClient('duponte@gmail.com');
@@ -286,7 +262,7 @@ class AppFixtures extends Fixture
             $client11 = new Client();
             $client11->setNomClient('durand')
                   ->setPrenomClient('nina')
-                  ->setAdresseClient('1_avenue_henri_martin')
+                  ->setAdresseClient('1 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('durrandni@gmail.com');
@@ -295,7 +271,7 @@ class AppFixtures extends Fixture
             $client12 = new Client();
             $client12->setNomClient('durand')
                   ->setPrenomClient('ninon')
-                  ->setAdresseClient('10_avenue_henri_martin')
+                  ->setAdresseClient('10 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('durandnino@gmail.com');
@@ -304,7 +280,7 @@ class AppFixtures extends Fixture
             $client13 = new Client();
             $client13->setNomClient('durand')
                   ->setPrenomClient('sabrina')
-                  ->setAdresseClient('11_avenue_henri_martin')
+                  ->setAdresseClient('11 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('dusab@gmail.com');
@@ -313,7 +289,7 @@ class AppFixtures extends Fixture
             $client14 = new Client();
             $client14->setNomClient('durand')
                   ->setPrenomClient('sabine')
-                  ->setAdresseClient('12_avenue_henri_martin')
+                  ->setAdresseClient('12 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('sabined@gmail.com');
@@ -322,7 +298,7 @@ class AppFixtures extends Fixture
             $client15 = new Client();
             $client15->setNomClient('durand')
                   ->setPrenomClient('mohaed')
-                  ->setAdresseClient('13_avenue_henri_martin')
+                  ->setAdresseClient('13 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('momod@gmail.com');
@@ -331,7 +307,7 @@ class AppFixtures extends Fixture
             $client16 = new Client();
             $client16->setNomClient('durand')
                   ->setPrenomClient('boubker')
-                  ->setAdresseClient('14_avenue_henri_martin')
+                  ->setAdresseClient('14 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('bobdu@gmail.com');
@@ -340,7 +316,7 @@ class AppFixtures extends Fixture
             $client17 = new Client();
             $client17->setNomClient('durand')
                   ->setPrenomClient('ali')
-                  ->setAdresseClient('15_avenue_henri_martin')
+                  ->setAdresseClient('15 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('alid@gmail.com');
@@ -349,7 +325,7 @@ class AppFixtures extends Fixture
             $client18 = new Client();
             $client18->setNomClient('durand')
                   ->setPrenomClient('hedi')
-                  ->setAdresseClient('16_avenue_henri_martin')
+                  ->setAdresseClient('16 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('hedid@gmail.com');
@@ -358,7 +334,7 @@ class AppFixtures extends Fixture
             $client19 = new Client();
             $client19->setNomClient('durand')
                   ->setPrenomClient('mehdi')
-                  ->setAdresseClient('17_avenue_henri_martin')
+                  ->setAdresseClient('17 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('med@gmail.com');
@@ -367,7 +343,7 @@ class AppFixtures extends Fixture
             $client20 = new Client();
             $client20->setNomClient('durand')
                   ->setPrenomClient('kelly')
-                  ->setAdresseClient('18_avenue_henri_martin')
+                  ->setAdresseClient('18 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('keld@gmail.com');
@@ -376,7 +352,7 @@ class AppFixtures extends Fixture
             $client21 = new Client();
             $client21->setNomClient('durand')
                   ->setPrenomClient('fleur')
-                  ->setAdresseClient('19_avenue_henri_martin')
+                  ->setAdresseClient('19 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('dfleur@gmail.com');
@@ -385,7 +361,7 @@ class AppFixtures extends Fixture
             $client22 = new Client();
             $client22->setNomClient('durand')
                   ->setPrenomClient('perle')
-                  ->setAdresseClient('21_avenue_henri_martin')
+                  ->setAdresseClient('21 avenue henri martin')
                   ->setCodePostalClient('75016')
                   ->setVilleClient('paris')
                   ->setMailClient('perled@gmail.com');
@@ -429,7 +405,7 @@ class AppFixtures extends Fixture
             $manager->persist($categorie5);
 
             $categorie6 = new Categorie();
-            $categorie6->setNomCategorie('protege_dent')
+            $categorie6->setNomCategorie('protege dent')
                   ->setImageArticle('7.jpg')
                   ->setCategorie($categorie1);
             $manager->persist($categorie6);
@@ -443,7 +419,7 @@ class AppFixtures extends Fixture
             $article = new Article();
             $article->setNomArticle('gant1')
                   ->setCategorie($categorie2)
-                  ->setDescriptionArticle('gant_bleu_sigle_ffb')
+                  ->setDescriptionArticle('gant bleu sigle ffb')
                   ->setMarqueArticle('adidas')
                   ->setPrixArticle('95.00')
                   ->setImageArticle('g1.jpg');
@@ -454,7 +430,7 @@ class AppFixtures extends Fixture
             $article1 = new Article();
             $article1->setNomArticle('gant2')
                   ->setCategorie($categorie2)
-                  ->setDescriptionArticle('gant_reyes_rouge')
+                  ->setDescriptionArticle('gant reyes rouge')
                   ->setMarqueArticle('reyes')
                   ->setPrixArticle('219.00')
                   ->setImageArticle('g2.jpg');
@@ -465,17 +441,17 @@ class AppFixtures extends Fixture
             $article2 = new Article();
             $article2->setNomArticle('gant3')
                   ->setCategorie($categorie2)
-                  ->setDescriptionArticle('gant_adidas_blanc_or')
+                  ->setDescriptionArticle('gant adidas blanc or')
                   ->setMarqueArticle('adidas')
                   ->setPrixArticle('55.00')
-                  ->setImageArticle('g4.jpg');
+                  ->setImageArticle('g3.jpg');
             $manager->persist($article2);
 
 
             $article3 = new Article();
             $article3->setNomArticle('gant4')
                   ->setCategorie($categorie2)
-                  ->setDescriptionArticle('gant_bleu_reyes')
+                  ->setDescriptionArticle('gant bleu reyes')
                   ->setMarqueArticle('reyes')
                   ->setPrixArticle('219.00')
                   ->setImageArticle('g4.jpg');
@@ -484,7 +460,7 @@ class AppFixtures extends Fixture
             $article4 = new Article();
             $article4->setNomArticle('short1')
                   ->setCategorie($categorie3)
-                  ->setDescriptionArticle('short_noir-everlast')
+                  ->setDescriptionArticle('short noir everlast')
                   ->setMarqueArticle('evrlast')
                   ->setPrixArticle('45.00')
                   ->setImageArticle('s1.jpg');
@@ -493,7 +469,7 @@ class AppFixtures extends Fixture
             $article5 = new Article();
             $article5->setNomArticle('short2')
                   ->setCategorie($categorie3)
-                  ->setDescriptionArticle('short_blanc_reyes')
+                  ->setDescriptionArticle('short blanc reyes')
                   ->setMarqueArticle('reyes')
                   ->setPrixArticle('39.00')
                   ->setImageArticle('s2.jpg');
@@ -502,7 +478,7 @@ class AppFixtures extends Fixture
             $article6 = new Article();
             $article6->setNomArticle('short3')
                   ->setCategorie($categorie3)
-                  ->setDescriptionArticle('short_rouge_elion')
+                  ->setDescriptionArticle('short rouge elion')
                   ->setMarqueArticle('elion')
                   ->setPrixArticle('24.90')
                   ->setImageArticle('s3.jpg');
@@ -511,7 +487,7 @@ class AppFixtures extends Fixture
             $article7 = new Article();
             $article7->setNomArticle('short4')
                   ->setCategorie($categorie3)
-                  ->setDescriptionArticle('short_tricolore')
+                  ->setDescriptionArticle('short tricolore')
                   ->setMarqueArticle('adidas')
                   ->setPrixArticle('45.00')
                   ->setImageArticle('s4.jpg');
@@ -520,7 +496,7 @@ class AppFixtures extends Fixture
             $article8 = new Article();
             $article8->setNomArticle('chaussure1')
             ->setCategorie($categorie4)
-                  ->setDescriptionArticle('chaussure_blanche_nike')
+                  ->setDescriptionArticle('chaussure blanche nike')
                   ->setMarqueArticle('nike')
                   ->setPrixArticle('189.00')
                   ->setImageArticle('ch1.jpg');
@@ -529,7 +505,7 @@ class AppFixtures extends Fixture
             $article9 = new Article();
             $article9->setNomArticle('chaussure2')
             ->setCategorie($categorie4)
-                  ->setDescriptionArticle('chaussure_bleu_nike')
+                  ->setDescriptionArticle('chaussure bleu nike')
                   ->setMarqueArticle('nike')
                   ->setPrixArticle('189.00')
                   ->setImageArticle('ch2.jpg');
@@ -538,7 +514,7 @@ class AppFixtures extends Fixture
             $article10 = new Article();
             $article10->setNomArticle('chaussure3')
             ->setCategorie($categorie4)
-                  ->setDescriptionArticle('chaussure_adidas')
+                  ->setDescriptionArticle('chaussure adidas')
                   ->setMarqueArticle('adidas')
                   ->setPrixArticle('75.00')
                   ->setImageArticle('ch3.jpg');
@@ -547,7 +523,7 @@ class AppFixtures extends Fixture
             $article11 = new Article();
             $article11->setNomArticle('chaussure4')
             ->setCategorie($categorie4)
-                  ->setDescriptionArticle('chaussure_champboxing')
+                  ->setDescriptionArticle('chaussure champboxing')
                   ->setMarqueArticle('champboxing')
                   ->setPrixArticle('68.90')
                   ->setImageArticle('ch4.jpg');
@@ -556,7 +532,7 @@ class AppFixtures extends Fixture
             $article12 = new Article();
             $article12->setNomArticle('casque1')
             ->setCategorie($categorie5)
-                  ->setDescriptionArticle('casque_elion_marron')
+                  ->setDescriptionArticle('casque elion marron')
                   ->setMarqueArticle('elion')
                   ->setPrixArticle('99.00')
                   ->setImageArticle('c1.jpg');
@@ -565,7 +541,7 @@ class AppFixtures extends Fixture
             $article13 = new Article();
             $article13->setNomArticle('casque2')
             ->setCategorie($categorie5)
-                  ->setDescriptionArticle('gant_amateur_everlast')
+                  ->setDescriptionArticle('gant amateur everlast')
                   ->setMarqueArticle('everlast')
                   ->setPrixArticle('95.00')
                   ->setImageArticle('c2.jpg');
@@ -574,7 +550,7 @@ class AppFixtures extends Fixture
             $article14 = new Article();
             $article14->setNomArticle('casque3')
             ->setCategorie($categorie5)
-                  ->setDescriptionArticle('casque_sparring')
+                  ->setDescriptionArticle('casque sparring')
                   ->setMarqueArticle('leone')
                   ->setPrixArticle('95.00')
                   ->setImageArticle('c3.jpg');
@@ -583,7 +559,7 @@ class AppFixtures extends Fixture
             $article15 = new Article();
             $article15->setNomArticle('casque4')
             ->setCategorie($categorie5)
-                  ->setDescriptionArticle('casque_adidas')
+                  ->setDescriptionArticle('casque adidas')
                   ->setMarqueArticle('adidas')
                   ->setPrixArticle('79.00')
                   ->setImageArticle('c4.jpg');
@@ -592,7 +568,7 @@ class AppFixtures extends Fixture
             $article16 = new Article();
             $article16->setNomArticle('protegedent1')
             ->setCategorie($categorie6)
-                  ->setDescriptionArticle('protege_dent_enfant')
+                  ->setDescriptionArticle('protege dent enfant')
                   ->setMarqueArticle('shockdoctor')
                   ->setPrixArticle('7.95')
                   ->setImageArticle('pd1.jpg');
@@ -601,7 +577,7 @@ class AppFixtures extends Fixture
             $article17 = new Article();
             $article17->setNomArticle('protegedent2')
             ->setCategorie($categorie6)
-                  ->setDescriptionArticle('protege_dent_adulte')
+                  ->setDescriptionArticle('protege dent adulte')
                   ->setMarqueArticle('shockdoctor')
                   ->setPrixArticle('9.95')
                   ->setImageArticle('pd2.jpg');
@@ -610,7 +586,7 @@ class AppFixtures extends Fixture
             $article18 = new Article();
             $article18->setNomArticle('protegedent3')
             ->setCategorie($categorie6)
-                  ->setDescriptionArticle('protege_dent_bleu_evol')
+                  ->setDescriptionArticle('protege dent bleu evol')
                   ->setMarqueArticle('shockdoctor')
                   ->setPrixArticle('28395')
                   ->setImageArticle('pd3.jpg');
@@ -619,7 +595,7 @@ class AppFixtures extends Fixture
             $article19 = new Article();
             $article19->setNomArticle('protegedent4')
             ->setCategorie($categorie6)
-                  ->setDescriptionArticle('protegedent_noir')
+                  ->setDescriptionArticle('protege dent noir')
                   ->setMarqueArticle('shockdoctor')
                   ->setPrixArticle('14.90')
                   ->setImageArticle('pd4.jpg');
@@ -628,7 +604,7 @@ class AppFixtures extends Fixture
             $article20 = new Article();
             $article20->setNomArticle('coquille1')
             ->setCategorie($categorie7)
-                  ->setDescriptionArticle('coquille_reyes')
+                  ->setDescriptionArticle('coquille reyes')
                   ->setMarqueArticle('reyes')
                   ->setPrixArticle('129.00')
                   ->setImageArticle('co1.jpg');
@@ -637,7 +613,7 @@ class AppFixtures extends Fixture
             $article21 = new Article();
             $article21->setNomArticle('coquille2')
             ->setCategorie($categorie7)
-                  ->setDescriptionArticle('coquille_shockdoctor')
+                  ->setDescriptionArticle('coquille shockdoctor')
                   ->setMarqueArticle('sockdoctor')
                   ->setPrixArticle('29.95')
                   ->setImageArticle('co2.jpg');
@@ -646,7 +622,7 @@ class AppFixtures extends Fixture
             $article22 = new Article();
             $article22->setNomArticle('coquille3')
             ->setCategorie($categorie7)
-                  ->setDescriptionArticle('coquille_chamboxing_simple')
+                  ->setDescriptionArticle('coquille champboxing simple')
                   ->setMarqueArticle('champboxing')
                   ->setPrixArticle('10.00')
                   ->setImageArticle('co3.jpg');
@@ -655,7 +631,7 @@ class AppFixtures extends Fixture
             $article23 = new Article();
             $article23->setNomArticle('coquille4')
             ->setCategorie($categorie7)
-                  ->setDescriptionArticle('coquillle_adidas_pro')
+                  ->setDescriptionArticle('coquillle adidas pro')
                   ->setMarqueArticle('adidas')
                   ->setPrixArticle('79.90')
                   ->setImageArticle('co4.jpg');
