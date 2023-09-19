@@ -7,12 +7,12 @@
         <div class="col-lg-4 my-2 d-flex justify-content-center">
             <div class="card border-dark mb-3" style="auto: 20rem;">
                 <div class="card-header">{{protegedent.nomArticle}}</div>
-                <img src="boxe/protegedent/{{protegedent.imageArticle}}" alt="" width="100">
+                <img src="boxe/article/{{protegedent.imageArticle}}" alt="" width="100">
                 <div class="card-body">
                   <h4 class="card-title"></h4>
                   <p class="card-text">{{protegedent.descriptionArticle}}</p>
                   <button type="button" class="btn btn-light" li class="nav-item">
-                    <a class="nav-link" href="{{path('app_short')}}">commandez </a></button>
+                    <a class="nav-link" href="{{path('app_carte_add',{'id':protegedent.id})}}">commandez </a></button>
       
                 </div>
         </div>

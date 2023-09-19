@@ -614,7 +614,7 @@ class AppFixtures extends Fixture
             $article21->setNomArticle('coquille2')
             ->setCategorie($categorie7)
                   ->setDescriptionArticle('coquille shockdoctor')
-                  ->setMarqueArticle('sockdoctor')
+                  ->setMarqueArticle('shockdoctor')
                   ->setPrixArticle('29.95')
                   ->setImageArticle('co2.jpg');
             $manager->persist($article21);

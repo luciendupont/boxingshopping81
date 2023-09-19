@@ -3,31 +3,41 @@
 {% block title %}Mon panier{% endblock %}
 
 {% block body %}
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+
+
+
+
+
 <main class="page-wrapper">
     {% if carte|length >0 %}
     <div class="container position-relative  pt-5 pb-lg-5 pb-md-4 pb-2">
         <div class="row">
             <div class="col-lg-12  pt-1">
                 <h2>Mon panier</h2>
-                <p>Ajouter d'autre plats disponibles sur le site <a class="btn" href="">voir les
-                        plat</a></p>
                 <a class="btn btn-outline-dark mb-2" href="">Suprimer tout mon panier</a>
                 {% set total = null %}
                 {% set quantite = 0 %}
                 {% for article in carte %}
                 {% set quantite = quantite + article.quantite %}
                 {% set total = total + (article.article.prixArticle * article.quantite) %}
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
                 <div class="d-sm-flex align-items-center border-top py-4">
                     <div class="w-100 pt-1 ps-sm-4">
                         <div class="d-flex">
                             <div class="card" style="width: 18rem;">
-                                <h3 class="h5 mb-2"> ma commande</h3>
-                         <img src="boxe/{{article.article.imageArticle}}" alt="">
+                                <h3 class="h5 mb-2">{{article.article.descriptionArticle}}</h3>
+                                <h4 class="h5 mb-2">{{article.article.marqueArticle}}</h4>
+                         <img src="boxe/article/{{article.article.imageArticle}}" alt="">
                             </div>
 
 
                             <div class="text-end ms-auto">
-                                <div class="fs-5 mb-2">€
+                                <div class="fs-5 mb-2">
                                 </div>
                             </div>
                         </div>
@@ -37,7 +47,7 @@
                     <div class="ms-3 d-flex col-xl-2 col-lg-3 col-sm-4 col-6">
                         <a href="" class="btn btn-dark fs-xl"
                             data-decrement="">-</a>
-                        <input class="form-control" type="number" value="" readonly>
+                        <input class="form-control" type="number" value="{{article.quantite}}" readonly>
                         <a href="" class="btn btn-dark fs-xl">+</a>
                     </div>
                     <div class="nav d-flex justify-content-end col-xl-9 col-lg-8 col-sm-7 col-6">
@@ -59,7 +69,7 @@
                 </ul>
                 <div class="d-flex align-items-center justify-content-between border-top fs-xl pt-4">Total:<span
                         class="fs-3 fw-semibold text-dark ms-2">{{ total|number_format(2,',','.') }}€</span></div>
-                <a href="" class="btn btn-lg btn-dark w-100 w-sm-auto mt-4">Valider mon
+                <a href="{{path('app_carte_valide')}}" class="btn btn-lg btn-dark w-100 w-sm-auto mt-4">Valider mon
                     panier</a>
             </div>
         </div>
@@ -72,5 +82,6 @@
         </div>
     </div>
     {% endif %}
+
 </main>
 {% endblock %}

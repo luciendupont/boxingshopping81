@@ -1,7 +1,19 @@
 body {
-    background-image: url(boxe/597939.jpg);
+    background-color: rgb(240, 146, 6);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
 
   }
+
+
+nav{
+
+  background-color: rgb(240, 146, 6);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+
+
+}
