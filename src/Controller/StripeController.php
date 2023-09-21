@@ -17,7 +17,7 @@ class StripeController extends AbstractController
     #[Route('/stripe/create-charge/{commande}', name: 'app_stripe_charge', methods: ['POST'])]
     public function createCharge(Request $request, commande $commande)
     {
-        Stripe\Stripe::setApiKey("sk_test_51N0iZNFPaCkpFiEQttCloECeEN4D0G0JTO4KQgQuyGRFYWmqvRxMIFWepPVZaQnIklKcYIeqW6k61mDCvqgZomwl00wEVu0pyy");
+        Stripe\Stripe::setApiKey("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");
         Stripe\Charge::create ([
                 "amount" =>$commande->getTotal()*100,
                 "currency" => "eur",
