@@ -18,10 +18,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class CarteController extends AbstractController
 {
     #[Route('/mon-panier', name: 'app_carte')]
-    public function index(CarteService $cartService): Response
+    public function index(CarteService $carteService): Response
     {
+
         return $this->render('carte/index.html.twig', [
-            'carte' => $cartService->getTotal()
+            'carte' => $carteService->getTotal()
         ]);
     }
 
@@ -53,20 +54,20 @@ class CarteController extends AbstractController
 
         $carteService->removeCartAll();
 
-        return $this->redirectToRoute('app_stripe',["commande"=>$commande->getid()]);
+        return $this->redirectToRoute('app_stripe',['']);
     }
 
     #[Route('/mon-panier/add/{id<\d+>}', name: 'app_carte_add')]
-    public function addToRoute(CarteService $cartService, int $id): Response
+    public function addToRoute(CarteService $carteService, int $id): Response
     {
-        $cartService->addToCart($id);
+        $carteService->addToCart($id);
         return $this->redirectToRoute('app_carte');
     }
 
     #[Route('/mon-panier/remove/{id<\d+>}', name: 'app_carte_remove')]
-    public function removeToCart(CarteService $cartService, int $id): Response
+    public function removeToCart(CarteService $carteService, int $id): Response
     {
-        $cartService->removeToCart($id);
+        $carteService->removeToCart($id);
         return $this->redirectToRoute('app_carte');
     }
 

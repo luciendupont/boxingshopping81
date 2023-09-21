@@ -48,7 +48,7 @@
                         <a href="" class="btn btn-dark fs-xl"
                             data-decrement="">-</a>
                         <input class="form-control" type="number" value="{{article.quantite}}" readonly>
-                        <a href="" class="btn btn-dark fs-xl">+</a>
+                        <a href="{{path('app_carte_add',{'id': article.article.id})}}" class="btn btn-dark fs-xl">+</a>
                     </div>
                     <div class="nav d-flex justify-content-end col-xl-9 col-lg-8 col-sm-7 col-6">
                         <a href="" class="nav-link "

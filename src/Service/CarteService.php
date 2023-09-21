@@ -57,20 +57,20 @@ class CarteService {
     public function getTotal(): array
     {
         $carte = $this->getSession()->get('app_carte');
-        $cartData = [];
+        $carteData = [];
         if ($carte) {
             foreach ($carte as $id => $quantite) {
                 $article = $this->em->getRepository(Article::class)->findOneBy(['id' => $id]);
                 if (!$article) {
                     // Supprimer le produit puis continuer en sortant de la boucle
                 }
-                $cartData[] = [
+                $carteData[] = [
                     'article' => $article,
                     'quantite' => $quantite
                 ];
             }
         }
-        return $cartData;
+        return $carteData;
     }
 
     private function getSession(): SessionInterface
