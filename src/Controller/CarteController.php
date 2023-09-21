@@ -26,7 +26,7 @@ class CarteController extends AbstractController
     }
 
     #[Route('/mon-panier/valide', name: 'app_carte_valide')]
-    public function valide(CarteService $carteService, Request $request, CategorieRepository $repo, EntityManagerInterface $em,ArticleRepository $article): Response
+    public function valide(CarteService $carteService, Request $request, CategorieRepository $categorieRepository, EntityManagerInterface $em,ArticleRepository $ArticleRepository): Response
     {
         $session = $request->getSession();
         $panier = $session->get('app_carte', []);
@@ -35,12 +35,12 @@ class CarteController extends AbstractController
         $total = 0;
         foreach($panier as $id => $quantite)
         {
-            $categorie = $repo->find($id);
+            $article = $ArticleRepository->findOneBy(['id' => $id]);
             
             $detail = new Detail();
             $detail->setQuantite($quantite);
             $em->persist($detail);
-            
+
 
 
             $total = $total + ($article->getPrixArticle() * $quantite);
@@ -50,8 +50,6 @@ class CarteController extends AbstractController
             ->setDateCommande(new \DateTimeImmutable())
             ->setUser($this->getUser());
         $em->persist($commande);
-
-        $em->flush();
 
         $carteService->removeCartAll();
 

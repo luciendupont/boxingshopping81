@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Form\RechercheType;
+
 use App\Repository\ArticleRepository;
 use App\Repository\CategorieRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,7 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class IndexController extends AbstractController
 {
     #[Route('/', name: 'app_index')]
-    public function index(CategorieRepository $categorieRepository): Response
+    public function index(CategorieRepository $categorieRepository , Request $request ,ArticleRepository $articleRepository): Response
     {
         $cat=$categorieRepository->findAll();
 
@@ -22,5 +22,7 @@ class IndexController extends AbstractController
         'cats'=>$cat,
         ]);
     }
+
+
 
 }
