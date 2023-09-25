@@ -16,10 +16,10 @@ class IndexController extends AbstractController
     public function index(CategorieRepository $categorieRepository , Request $request ,ArticleRepository $articleRepository): Response
     {
         $cat=$categorieRepository->findAll();
-
+        $art=$articleRepository->findAll();
 
         return $this->render('index/index.html.twig', [
-        'cats'=>$cat,
+        'cats'=>$cat,'arts'=>$art
         ]);
     }
 

@@ -417,9 +417,9 @@ class AppFixtures extends Fixture
             $manager->persist($categorie7);
 
             $article = new Article();
-            $article->setNomArticle('gant1')
+            $article->setNomArticle('gant ffb')
                   ->setCategorie($categorie2)
-                  ->setDescriptionArticle('gant bleu sigle ffb')
+                  ->setDescriptionArticle('gant de marque adidas sigle ffb')
                   ->setMarqueArticle('adidas')
                   ->setPrixArticle('95.00')
                   ->setImageArticle('g1.jpg');
@@ -428,9 +428,9 @@ class AppFixtures extends Fixture
 
 
             $article1 = new Article();
-            $article1->setNomArticle('gant2')
+            $article1->setNomArticle(' gant reyes  rouge')
                   ->setCategorie($categorie2)
-                  ->setDescriptionArticle('gant reyes rouge')
+                  ->setDescriptionArticle('gant reyes pour les  combats  professionnelles ')
                   ->setMarqueArticle('reyes')
                   ->setPrixArticle('219.00')
                   ->setImageArticle('g2.jpg');
@@ -439,9 +439,9 @@ class AppFixtures extends Fixture
 
 
             $article2 = new Article();
-            $article2->setNomArticle('gant3')
+            $article2->setNomArticle('gant adidas  gold')
                   ->setCategorie($categorie2)
-                  ->setDescriptionArticle('gant adidas blanc or')
+                  ->setDescriptionArticle('gant d entrainement')
                   ->setMarqueArticle('adidas')
                   ->setPrixArticle('55.00')
                   ->setImageArticle('g3.jpg');
@@ -449,9 +449,9 @@ class AppFixtures extends Fixture
 
 
             $article3 = new Article();
-            $article3->setNomArticle('gant4')
+            $article3->setNomArticle('gant reyes bleu')
                   ->setCategorie($categorie2)
-                  ->setDescriptionArticle('gant bleu reyes')
+                  ->setDescriptionArticle('gant bleu   pour les combat professionelles ')
                   ->setMarqueArticle('reyes')
                   ->setPrixArticle('219.00')
                   ->setImageArticle('g4.jpg');
@@ -588,7 +588,7 @@ class AppFixtures extends Fixture
             ->setCategorie($categorie6)
                   ->setDescriptionArticle('protege dent bleu evol')
                   ->setMarqueArticle('shockdoctor')
-                  ->setPrixArticle('28395')
+                  ->setPrixArticle('28.95')
                   ->setImageArticle('pd3.jpg');
             $manager->persist($article18);
 

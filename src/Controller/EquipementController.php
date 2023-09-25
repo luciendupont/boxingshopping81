@@ -13,6 +13,7 @@ class EquipementController extends AbstractController
     #[Route('/equipement', name: 'app_equipement')]
     public function index( ArticleRepository $articleRepository ,CategorieRepository $categorieRepository ): Response
     {
+        
         $cat=$categorieRepository->findBy(['id' => 3]);
         $cat1=$categorieRepository->findBy(['id' => 4]);
         $cat2=$categorieRepository->findBy(['id' => 5]);
