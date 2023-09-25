@@ -34,9 +34,13 @@ class Detail
     #[ORM\OneToMany(mappedBy: 'detail', targetEntity: Commande::class)]
     private Collection $commandes;
 
+    #[ORM\OneToMany(mappedBy: 'detail', targetEntity: Article::class)]
+    private Collection $article;
+
     public function __construct()
     {
         $this->commandes = new ArrayCollection();
+        $this->article = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -133,4 +137,35 @@ class Detail
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, Article>
+     */
+    public function getArticle(): Collection
+    {
+        return $this->article;
+    }
+
+    public function addArticle(Article $article): static
+    {
+        if (!$this->article->contains($article)) {
+            $this->article->add($article);
+            $article->setDetail($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArticle(Article $article): static
+    {
+        if ($this->article->removeElement($article)) {
+            // set the owning side to null (unless already changed)
+            if ($article->getDetail() === $this) {
+                $article->setDetail(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

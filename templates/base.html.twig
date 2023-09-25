@@ -9,8 +9,7 @@
   {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
   {% block stylesheets %}
   <link rel="stylesheet" href="https://bootswatch.com/5/zephyr/bootstrap.css">
-<link rel="stylesheet" href="boxe/1.css">
-
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   {% endblock %}
 
   {% block javascripts %}
@@ -96,7 +95,11 @@
                 </div>
               </div>
 
-
+              <li class="nav-item mt-1">
+                <a href="{{ path('app_panier') }}" class="nav-link active ">
+                    <i class='bx bxs-cart fs-4'></i>
+                </a>
+            </li>
 
 
   </nav>

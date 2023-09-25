@@ -43,6 +43,9 @@ class Article
     #[ORM\ManyToOne(inversedBy: 'article')]
     private ?Categorie $categorie = null;
 
+    #[ORM\ManyToOne(inversedBy: 'article')]
+    private ?Detail $detail = null;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -193,6 +196,18 @@ class Article
     public function setCategorie(?Categorie $categorie): static
     {
         $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getDetail(): ?Detail
+    {
+        return $this->detail;
+    }
+
+    public function setDetail(?Detail $detail): static
+    {
+        $this->detail = $detail;
 
         return $this;
     }
