@@ -8,7 +8,6 @@ use App\Entity\Article;
 use App\Entity\Commande;
 use App\Entity\Categorie;
 use App\Entity\Fournisseur;
-use DateTime;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 

@@ -24,70 +24,26 @@
     </div>
   </div>
 
+  <h1 class="mb-5">Categories</h1>
+  <div class="row">
+      {% for cat in cats %} 
+      <div class="col-lg-6 mb-3 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+              <img src="boxe/{{ cat.imageArticle }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h2 class="card-title">{{ cat.nomCategorie }}</h2>
+              </div>
 
+          </div>
+      </div>
+      
+      {% endfor %}
+      
+      </div>
 
         </div>
     </div>
 </div>
-
-
-
- 
-
-
-
-<div class="container">
-    <div class="row">
-
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="500">
-                    <img src="boxe/1.jpg" class="d-block w-50" alt="equipement" >
-                </div>
-
-                <div class="carousel-item active" data-bs-interval="500">
-                    <img src="boxe/2.jpg" class="d-block w-50" alt="protection" >
-                </div>
-
-                <div class="carousel-item active" data-bs-interval="500">
-                    <img src="boxe/3.jpg" class="d-block w-50" alt="gant" >
-                </div>
-
-                <div class="carousel-item active" data-bs-interval="500">
-                    <img src="boxe/4.jpg" class="d-block w-50" alt="short">
-                </div>
-
-                <div class="carousel-item active" data-bs-interval="500">
-                    <img src="boxe/5.jpg" class="d-block w-50" alt="chaussure">
-                </div>
-
-                <div class="carousel-item active" data-bs-interval="500">
-                    <img src="boxe/6.jpg" class="d-block w-50" alt="casque">
-                </div>
-
-                <div class="carousel-item active" data-bs-interval="500">
-                    <img src="boxe/7.jpg" class="d-block w-50" alt="coquillle">
-                </div>
-
-                <div class="carousel-item active" data-bs-interval="500">
-                    <img src="boxe/8.jpg" class="d-block w-50" alt="protege dent">
-                </div>
-
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
-        </div>
-    </div>
 
 
     {% endblock %}
