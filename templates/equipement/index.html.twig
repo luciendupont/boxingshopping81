@@ -6,7 +6,7 @@
 <div class="container text-center">
     <div class="row">
         <div class="col">
-            <h1>BOXING  SHOPPING 1981</h1>
+            <h1>BOXING SHOPPING 1981</h1>
 
         </div>
     </div>
@@ -14,53 +14,92 @@
 
 
 
-<div class="btn-btn" role="group" aria-label="Button group with nested dropdown">
-    <a href="{{path('app_index')}}" class="btn btn-light">RETOUR</a>
-    <div class="btn-group" role="group">
+    <div class="btn-btn" role="group" aria-label="Button group with nested dropdown">
+        <a href="{{path('app_index')}}" class="btn btn-light">RETOUR</a>
+        <div class="btn-group" role="group">
 
-</div>
+        </div>
 
-<div class="container ">
-    <div class="row ">
 
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner mt-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-4">
 
-                <div class="carousel-item active" data-bs-interval="2700">
-                    <img src="boxe/3.jpg" class="d-block w-50" alt="gant" >
-                    <button type="button" class="btn btn-light" li class="nav-item">
-                        <a class="nav-link" href="{{path('app_gant')}}">voir les gants</a></button>
+
+
+
+
+
+
+
+
+                    <h1 class="mb-5"></h1>
+                    <div class="row">
+                        {% for cat in cats %}
+                        <div class="col-lg-6 mb-3 d-flex justify-content-center">
+                            <div class="card" style="width: 18rem;">
+                                <img src="boxe/{{ cat.imageArticle }}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h2 class="card-title">{{ cat.nomCategorie }}</h2>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {% endfor %}
+
+                    </div>
+
                 </div>
 
-                <div class="carousel-item active" data-bs-interval="2700">
-                    <img src="boxe/4.jpg" class="d-block w-50" alt="short">
-                    <button type="button" class="btn btn-light" li class="nav-item">
-                        <a class="nav-link" href="{{path('app_short')}}">voir les shorts</a></button>
+
+
+        <h1 class="mb-5"></h1>
+        <div class="row">
+            {% for cat1 in cats1 %}
+            <div class="col-lg-6 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="boxe/{{ cat1.imageArticle }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ cat1.nomCategorie }}</h2>
+                    </div>
+
                 </div>
+            </div>
 
-                <div class="carousel-item active" data-bs-interval="2700">
-                    <img src="boxe/5.jpg" class="d-block w-50" alt="chaussure">
-                    <button type="button" class="btn btn-light" li class="nav-item">
-                        <a class="nav-link" href="{{path('app_chaussure')}}">voir les chausures</a></button>
-                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
 
 
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+
+<h1 class="mb-5"></h1>
+<div class="row">
+    {% for cat2 in cats2 %}
+    <div class="col-lg-6 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="boxe/{{ cat2.imageArticle }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h2 class="card-title">{{ cat2.nomCategorie }}</h2>
             </div>
 
         </div>
     </div>
 
+    {% endfor %}
 
+</div>
+
+</div>
+
+
+
+
+</div>
+</div>
+</div>
 
 {% endblock %}

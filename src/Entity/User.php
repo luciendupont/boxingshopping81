@@ -22,8 +22,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 50, unique: true)]
-    #[Assert\NotBlank(message: 'Veuillez entre votre email')]
-    #[Assert\Email(message: 'Veuillez entre votre email',)]
+    #[Assert\NotBlank(message: 'Veuillez entrer votre email')]
+    #[Assert\Email(message: 'Veuillez entrer votre email',)]
     private ?string $email = null;
 
     #[ORM\Column]
@@ -41,33 +41,33 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $newPassword;
 
     #[ORM\Column(length: 50)]
-    #[Assert\NotBlank(message: 'Veuillez entre votre nom')]
+    #[Assert\NotBlank(message: 'Veuillez entrer votre nom')]
     #[Assert\Length(min: 5, minMessage: "Le nom est trop court")]
     private ?string $nom = null;
 
     #[ORM\Column(length: 50)]
-    #[Assert\NotBlank(message: 'Veuillez entre votre prenom')]
+    #[Assert\NotBlank(message: 'Veuillez entrer votre prenom')]
     #[Assert\Length(min: 4, minMessage: "Le prenom est trop court")]
     private ?string $prenom = null;
 
     #[ORM\Column(length: 20)]
-    #[Assert\NotBlank(message: 'Veuillez entre votre numero de telephone')]
+    #[Assert\NotBlank(message: 'Veuillez entrer votre numero de telephone')]
     #[Assert\Length(min: 10, minMessage: "Le numero de telephone est trop court")]
     private ?string $telephone = null;
 
 
     #[ORM\Column(length: 20)]
-    #[Assert\NotBlank(message: 'Veuillez entre votre code postal')]
+    #[Assert\NotBlank(message: 'Veuillez entrer votre code postal')]
     #[Assert\Length(min: 5, minMessage: "Le code postal est trop court")]
     private ?string $cp = null;
 
     #[ORM\Column(length: 50)]
-    #[Assert\NotBlank(message: 'Veuillez entre votre ville')]
+    #[Assert\NotBlank(message: 'Veuillez entrer votre ville')]
     #[Assert\Length(min: 5, minMessage: "Le nom de votre ville est trop court")]
     private ?string $ville = null;
 
     #[ORM\Column(length: 50)]
-    #[Assert\NotBlank(message: 'Veuillez entre votre adresse')]
+    #[Assert\NotBlank(message: 'Veuillez entrer votre adresse')]
     #[Assert\Length(min: 10, minMessage: "La adresse est trop court")]
     private ?string $adresse = null;
 

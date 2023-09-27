@@ -37,8 +37,6 @@ class Commande
     #[ORM\Column]
     private ?int $etat = null;
 
-    #[ORM\ManyToOne(inversedBy: 'commandes')]
-    private ?Detail $detail = null;
 
     #[ORM\ManyToOne(inversedBy: 'commandes')]
     private ?User $user = null;
@@ -151,18 +149,6 @@ class Commande
     public function setEtat(int $etat): static
     {
         $this->etat = $etat;
-
-        return $this;
-    }
-
-    public function getDetail(): ?Detail
-    {
-        return $this->detail;
-    }
-
-    public function setDetail(?Detail $detail): static
-    {
-        $this->detail = $detail;
 
         return $this;
     }

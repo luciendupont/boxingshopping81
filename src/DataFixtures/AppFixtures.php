@@ -22,7 +22,7 @@ class AppFixtures extends Fixture
                   ->setEmail('lucienluludupont@gmail.com')
                   ->setTelephone('0610041848')
                   ->setPassword(password_hash('Amiens80', PASSWORD_DEFAULT))
-                  ->setRoles(['ROLE_ADMIN', 'ROLEUSER'])
+                  ->setRoles(['ROLE_ADMIN', 'ROLE_USER'])
                   ->setAdresse('7 mail roger salengro apt 55')
                   ->setCp('80090')
                   ->setVille('Amiens');

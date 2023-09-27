@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+<div class="row justify-content-center">
+<h1>ESPACE  ADMIN</h1>
+</div>
+</div>
+
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6 ">
+            <a class="btn btn-lg btn-light me-5" href="{{path('app_article_index')}}">ARTICLE</a>
+<div class="col-6">
+            <a class="btn btn-lg btn-light" href="{{path('app_client_index')}}">CLIENT</a>
+            <div class="col-6">
+            <a class="btn btn-lg btn-light" href="{{path('app_commande_index')}}">COMMANDE</a>
+            <a class="btn btn-lg btn-light" href="{{path('app_fournisseur_index')}}">FOURISSEUR</a>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+</div>
+
+
+</div>
+
+{% endblock %}
