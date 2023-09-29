@@ -17,6 +17,7 @@ class CasqueController extends AbstractController
         $casque=$articleRepository->findBy(['categorie'=>6]);
         return $this->render('casque/index.html.twig', [
             'casques'=>$casque,
+            'routes' => '/' ,
         ]);
     }
 }

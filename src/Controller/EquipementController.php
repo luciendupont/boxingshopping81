@@ -20,7 +20,8 @@ class EquipementController extends AbstractController
 
 
         return $this->render('equipement/index.html.twig', [
-            'cats'=>$cat,'cats1'=>$cat1,'cats2'=>$cat2
+            'cats'=>$cat,'cats1'=>$cat1,'cats2'=>$cat2,
+            'routes' => '/' ,
         ]);
     }
 }

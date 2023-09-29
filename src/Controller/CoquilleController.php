@@ -14,6 +14,7 @@ class CoquilleController extends AbstractController
     {$coquille=$articleRepository->findBy(['categorie'=>8]);
         return $this->render('coquille/index.html.twig', [
            'coquilles'=>$coquille ,
+           'routes' => '/' ,
         ]);
     }
 }

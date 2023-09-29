@@ -15,6 +15,7 @@ class ProtegedentController extends AbstractController
         $protegedent=$articleRepository->findBy(['categorie'=>7]);
         return $this->render('protegedent/index.html.twig', [
             'protegedents'=>$protegedent,
+            'routes' => '/' 
         ]);
     }
 }

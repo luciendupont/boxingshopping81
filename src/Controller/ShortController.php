@@ -16,6 +16,7 @@ class ShortController extends AbstractController
         $short=$articleRepository->findBy(['categorie'=>4]);
         return $this->render('short/index.html.twig', [
             'shorts'=>$short,
+            'routes' => '/' ,
         ]);
     }
 }

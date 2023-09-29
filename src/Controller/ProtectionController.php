@@ -19,7 +19,8 @@ class ProtectionController extends AbstractController
 
 
         return $this->render('protection/index.html.twig', [
-           'cats'=>$cat,'cats1'=>$cat1,'cats2'=>$cat2
+           'cats'=>$cat,'cats1'=>$cat1,'cats2'=>$cat2,
+           'routes' => '/' ,
         ]);
     }
 }

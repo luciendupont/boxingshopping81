@@ -15,6 +15,7 @@ class ChaussureController extends AbstractController
     {$chaussure=$articleRepository->findBy(['categorie'=>5]);
         return $this->render('chaussure/index.html.twig', [
             'chaussures'=>$chaussure,
+            'routes' => '/' ,
         ]);
     }
 }

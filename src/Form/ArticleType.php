@@ -23,7 +23,6 @@ class ArticleType extends AbstractType
                 "class"=>Categorie::class,
                 "choice_label"=>"nom_categorie"
             ])
-            ->add('detail')
         ;
     }
 
