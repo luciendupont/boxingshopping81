@@ -9,8 +9,8 @@
             <h1>BOXING SHOPPING 1981</h1>
 
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-4">
+                <div class="row ">
+                    <div class="col">
     
     
     
@@ -21,55 +21,55 @@
     
     
                         <h1 class="mb-5"></h1>
-                        <div class="row">
+                        <div class="row  align-items-start">
                             {% for cat in cats %}
-                            <div class="col-lg-6 mb-3 d-flex justify-content-center">
+                            <div class="col">
                                 <div class="card" style="width: 18rem;">
                                     <img src="boxe/{{ cat.imageArticle }}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h2 class="card-title">{{ cat.nomCategorie }}</h2>
+                                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                            <a href="{{path("app_casque")}}" class="btn btn-light">voir les casques</a>
+                                            <div class="btn-group" role="group">
+                                            </div>                                </div>
                                     </div>
-    
                                 </div>
                             </div>
-    
                             {% endfor %}
     
-    
-    
-    
-            <h1 class="mb-5"></h1>
-            <div class="row">
+ 
                 {% for cat1 in cats1 %}
-                <div class="col-lg-6 mb-3 d-flex justify-content-center">
+                <div class="col">
                     <div class="card" style="width: 18rem;">
                         <img src="boxe/{{ cat1.imageArticle }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title">{{ cat1.nomCategorie }}</h2>
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <a href="{{path("app_gant")}}" class="btn btn-light">voir les gants</a>
+                                <div class="btn-group" role="group">
+                                </div>                                </div>
                         </div>
-    
                     </div>
                 </div>
-    
                 {% endfor %}
     
     
     
-    
-    
-    <h1 class="mb-5"></h1>
-    <div class="row">
+
         {% for cat2 in cats2 %}
-        <div class="col-lg-6 mb-3 d-flex justify-content-center">
+        <div class="col">
             <div class="card" style="width: 18rem;">
                 <img src="boxe/{{ cat2.imageArticle }}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2 class="card-title">{{ cat2.nomCategorie }}</h2>
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <a href="{{path("app_coquille")}}" class="btn btn-light">voir les coquilles</a>
+                        <div class="btn-group" role="group">
+                        </div>                                </div>
                 </div>
-    
             </div>
         </div>
-    
+
         {% endfor %}
     
     
