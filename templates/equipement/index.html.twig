@@ -10,84 +10,90 @@
 
         </div>
     </div>
+</div>
 
 
-
-
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
     <div class="btn-btn" role="group" aria-label="Button group with nested dropdown">
         <a href="{{path('app_index')}}" class="btn btn-light">RETOUR</a>
         <div class="btn-group" role="group">
 
         </div>
+    </div>
+        </div>
+    </div>
+</div>
 
 
-        <div class="container mb-4">
+        <div class="container text-center mb-4">
             <div class="row">
                 <div class="col">
 
-
-
-
-
-
-
-
-
-                    <h1 class="mb-5"></h1>
-                    <div class="row  align-items-start">
-                        {% for cat in cats %}
-                        <div class="col">
-                            <div class="card" style="width: 18rem;">
-                                <img src="boxe/{{ cat.imageArticle }}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h2 class="card-title">{{ cat.nomCategorie }}</h2>
-                                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                                        <a href="{{path("app_gant")}}" class="btn btn-light">voir les gants</a>
-                                        <div class="btn-group" role="group">
-                                        </div>                                </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {% endfor %}
-
-
-
-
-       
-            {% for cat1 in cats1 %}
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="boxe/{{ cat1.imageArticle }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h2 class="card-title">{{ cat1.nomCategorie }}</h2>
-                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                            <a href="{{path("app_short")}}" class="btn btn-light">voir les shorts</a>
-                            <div class="btn-group" role="group">
-                            </div>                                </div>
-                    </div>
+                    <h1 class="mb-5">équipement</h1>
                 </div>
-            </div>            {% endfor %}
-
-
-
-
-
-
-    {% for cat2 in cats2 %}
-    <div class="col">
-        <div class="card" style="width: 18rem;">
-            <img src="boxe/{{ cat2.imageArticle }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h2 class="card-title">{{ cat2.nomCategorie }}</h2>
-                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                    <a href="{{path("app_chaussure")}}" class="btn btn-light">voir les chaussures</a>
-                    <div class="btn-group" role="group">
-                    </div>                                </div>
             </div>
         </div>
-    </div>
-    {% endfor %}
+
+
+
+<div class="container">
+    
+
+
+
+                  <h1 class="mb-5"></h1>
+                  <div class="row  align-items-start">
+                      {% for cat in cats %}
+                      <div class="col">
+                          <div class="card" style="width: 18rem;">
+                              <img src="boxe/{{ cat.imageArticle }}" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                  <h2 class="card-title">{{ cat.nomCategorie }}</h2>
+                                  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                      <a href="{{path("app_casque")}}" class="btn btn-light">voir les gants</a>
+                                      <div class="btn-group" role="group">
+                                      </div>                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      {% endfor %}
+
+
+          {% for cat1 in cats1 %}
+          <div class="col">
+              <div class="card" style="width: 18rem;">
+                  <img src="boxe/{{ cat1.imageArticle }}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h2 class="card-title">{{ cat1.nomCategorie }}</h2>
+                      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                          <a href="{{path("app_gant")}}" class="btn btn-light">voir les shorts</a>
+                          <div class="btn-group" role="group">
+                          </div>                                </div>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
+
+
+
+
+  {% for cat2 in cats2 %}
+  <div class="col">
+      <div class="card" style="width: 18rem;">
+          <img src="boxe/{{ cat2.imageArticle }}" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h2 class="card-title">{{ cat2.nomCategorie }}</h2>
+              <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                  <a href="{{path("app_coquille")}}" class="btn btn-light">voir les chaussures</a>
+                  <div class="btn-group" role="group">
+                  </div>                                </div>
+          </div>
+      </div>
+  </div>
+
+  {% endfor %}
 
 
 
@@ -97,5 +103,6 @@
 </div>
 </div>
 </div>
+
 
 {% endblock %}
