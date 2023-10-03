@@ -457,7 +457,7 @@ class AppFixtures extends Fixture
             $manager->persist($article3);
 
             $article4 = new Article();
-            $article4->setNomArticle('short1')
+            $article4->setNomArticle('short everlast')
                   ->setCategorie($categorie3)
                   ->setDescriptionArticle('short noir everlast')
                   ->setMarqueArticle('evrlast')
@@ -466,7 +466,7 @@ class AppFixtures extends Fixture
             $manager->persist($article4);
 
             $article5 = new Article();
-            $article5->setNomArticle('short2')
+            $article5->setNomArticle('short reyes')
                   ->setCategorie($categorie3)
                   ->setDescriptionArticle('short blanc reyes')
                   ->setMarqueArticle('reyes')
@@ -475,7 +475,7 @@ class AppFixtures extends Fixture
             $manager->persist($article5);
 
             $article6 = new Article();
-            $article6->setNomArticle('short3')
+            $article6->setNomArticle('short elion')
                   ->setCategorie($categorie3)
                   ->setDescriptionArticle('short rouge elion')
                   ->setMarqueArticle('elion')
@@ -484,7 +484,7 @@ class AppFixtures extends Fixture
             $manager->persist($article6);
 
             $article7 = new Article();
-            $article7->setNomArticle('short4')
+            $article7->setNomArticle('short tricolore  ffb')
                   ->setCategorie($categorie3)
                   ->setDescriptionArticle('short tricolore')
                   ->setMarqueArticle('adidas')
@@ -493,7 +493,7 @@ class AppFixtures extends Fixture
             $manager->persist($article7);
 
             $article8 = new Article();
-            $article8->setNomArticle('chaussure1')
+            $article8->setNomArticle('chaussure nike white')
             ->setCategorie($categorie4)
                   ->setDescriptionArticle('chaussure blanche nike')
                   ->setMarqueArticle('nike')
@@ -502,7 +502,7 @@ class AppFixtures extends Fixture
             $manager->persist($article8);
 
             $article9 = new Article();
-            $article9->setNomArticle('chaussure2')
+            $article9->setNomArticle('chaussure  nike  blue')
             ->setCategorie($categorie4)
                   ->setDescriptionArticle('chaussure bleu nike')
                   ->setMarqueArticle('nike')
@@ -511,7 +511,7 @@ class AppFixtures extends Fixture
             $manager->persist($article9);
 
             $article10 = new Article();
-            $article10->setNomArticle('chaussure3')
+            $article10->setNomArticle('chaussure  adidas')
             ->setCategorie($categorie4)
                   ->setDescriptionArticle('chaussure adidas')
                   ->setMarqueArticle('adidas')
@@ -520,7 +520,7 @@ class AppFixtures extends Fixture
             $manager->persist($article10);
 
             $article11 = new Article();
-            $article11->setNomArticle('chaussure4')
+            $article11->setNomArticle('chaussure  champ  boxing ')
             ->setCategorie($categorie4)
                   ->setDescriptionArticle('chaussure champboxing')
                   ->setMarqueArticle('champboxing')
@@ -529,7 +529,7 @@ class AppFixtures extends Fixture
             $manager->persist($article11);
 
             $article12 = new Article();
-            $article12->setNomArticle('casque1')
+            $article12->setNomArticle('casque elion')
             ->setCategorie($categorie5)
                   ->setDescriptionArticle('casque elion marron')
                   ->setMarqueArticle('elion')
@@ -538,7 +538,7 @@ class AppFixtures extends Fixture
             $manager->persist($article12);
 
             $article13 = new Article();
-            $article13->setNomArticle('casque2')
+            $article13->setNomArticle('casque  everlast')
             ->setCategorie($categorie5)
                   ->setDescriptionArticle('gant amateur everlast')
                   ->setMarqueArticle('everlast')
@@ -547,7 +547,7 @@ class AppFixtures extends Fixture
             $manager->persist($article13);
 
             $article14 = new Article();
-            $article14->setNomArticle('casque3')
+            $article14->setNomArticle('casque leone ')
             ->setCategorie($categorie5)
                   ->setDescriptionArticle('casque sparring')
                   ->setMarqueArticle('leone')
@@ -556,7 +556,7 @@ class AppFixtures extends Fixture
             $manager->persist($article14);
 
             $article15 = new Article();
-            $article15->setNomArticle('casque4')
+            $article15->setNomArticle('casque adidas')
             ->setCategorie($categorie5)
                   ->setDescriptionArticle('casque adidas')
                   ->setMarqueArticle('adidas')
@@ -565,7 +565,7 @@ class AppFixtures extends Fixture
             $manager->persist($article15);
 
             $article16 = new Article();
-            $article16->setNomArticle('protegedent1')
+            $article16->setNomArticle('protege dent enfant')
             ->setCategorie($categorie6)
                   ->setDescriptionArticle('protege dent enfant')
                   ->setMarqueArticle('shockdoctor')
@@ -574,7 +574,7 @@ class AppFixtures extends Fixture
             $manager->persist($article16);
 
             $article17 = new Article();
-            $article17->setNomArticle('protegedent2')
+            $article17->setNomArticle('protegedent adulte')
             ->setCategorie($categorie6)
                   ->setDescriptionArticle('protege dent adulte')
                   ->setMarqueArticle('shockdoctor')
@@ -583,7 +583,7 @@ class AppFixtures extends Fixture
             $manager->persist($article17);
 
             $article18 = new Article();
-            $article18->setNomArticle('protegedent3')
+            $article18->setNomArticle('protegedent evolution')
             ->setCategorie($categorie6)
                   ->setDescriptionArticle('protege dent bleu evol')
                   ->setMarqueArticle('shockdoctor')
@@ -592,7 +592,7 @@ class AppFixtures extends Fixture
             $manager->persist($article18);
 
             $article19 = new Article();
-            $article19->setNomArticle('protegedent4')
+            $article19->setNomArticle('protegedent basic')
             ->setCategorie($categorie6)
                   ->setDescriptionArticle('protege dent noir')
                   ->setMarqueArticle('shockdoctor')
@@ -601,7 +601,7 @@ class AppFixtures extends Fixture
             $manager->persist($article19);
 
             $article20 = new Article();
-            $article20->setNomArticle('coquille1')
+            $article20->setNomArticle('coquille reyes')
             ->setCategorie($categorie7)
                   ->setDescriptionArticle('coquille reyes')
                   ->setMarqueArticle('reyes')
@@ -610,7 +610,7 @@ class AppFixtures extends Fixture
             $manager->persist($article20);
 
             $article21 = new Article();
-            $article21->setNomArticle('coquille2')
+            $article21->setNomArticle('coquille adulte')
             ->setCategorie($categorie7)
                   ->setDescriptionArticle('coquille shockdoctor')
                   ->setMarqueArticle('shockdoctor')
@@ -619,7 +619,7 @@ class AppFixtures extends Fixture
             $manager->persist($article21);
 
             $article22 = new Article();
-            $article22->setNomArticle('coquille3')
+            $article22->setNomArticle('coquille enfant ')
             ->setCategorie($categorie7)
                   ->setDescriptionArticle('coquille champboxing simple')
                   ->setMarqueArticle('champboxing')
@@ -628,7 +628,7 @@ class AppFixtures extends Fixture
             $manager->persist($article22);
 
             $article23 = new Article();
-            $article23->setNomArticle('coquille4')
+            $article23->setNomArticle('coquille  pro adidas')
             ->setCategorie($categorie7)
                   ->setDescriptionArticle('coquillle adidas pro')
                   ->setMarqueArticle('adidas')
