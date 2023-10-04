@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-lg-12  pt-1">
                 <h2>Mon panier</h2>
-                <a class="btn btn-outline-dark mb-2" href="">Suprimer tout mon panier</a>
+                <a class="btn btn-outline-dark mb-2" href="{{path('app_cart_removeAll')}}">Suprimer tout mon panier</a>
                 {% set total = null %}
                 {% set quantite = 0 %}
                 {% for article in panier %}
@@ -52,7 +52,7 @@
                         <a href="{{path('app_panier_add',{'id': article.article.id})}}" class="btn btn-dark fs-xl">+</a>
                     </div>
                     <div class="nav d-flex justify-content-end col-xl-9 col-lg-8 col-sm-7 col-6">
-                        <a href="{{path('app_panier')}}" class="nav-link "
+                        <a href="{{path('app_panier_remove',{'id':article.article.id})}}" class="nav-link "
                             data-bs-toggle="tooltip" title="Remove">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-trash" viewBox="0 0 16 16">

@@ -1,25 +1,68 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}INSCRIPTION{% endblock %}
+{% block title %}Inscription{% endblock %}
 
 {% block body %}
-    {% for flash_error in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
-    {% endfor %}
+{% for flash_error in app.flashes('verify_email_error') %}
+<div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+{% endfor %}
 
-    <h1>S'</h1>
+<div class="row d-flex justify-content-center mt-5">
+    <div class="col-6 bg-light-subtle">
+        <div class="d-flex justify-content-center w-100">
+            {{ form_errors(registrationForm) }}
+            <div>
+                <h1 class="h3 mt-5 font-weight-normal fs-2">Inscription</h1>
 
-    {{ form_errors(registrationForm) }}
+                {{ form_start(registrationForm, {attr:{id: 'registration'}}) }}
+                <div class="w-100 mt-3">
+                    {{ form_row(registrationForm.nom, {
+                    label: 'Nom'
+                    }) }}
+                    <span id="erreurNom" class="text-danger"></span>
+                </div>
+                <div class="w-100 mt-3">
+                    {{ form_row(registrationForm.prenom, {
+                    label: 'Prenom'
+                    }) }}
+                    <span id="erreurPrenom" class="text-danger"></span>
+                </div>
+                
+                <div class="w-100 mt-3">
+                    {{ form_row(registrationForm.email) }}
+                    <span id="erreurEmail" class="text-danger"></span>
+                </div>     
+                <div class="w-100 mt-3">
+                    {{ form_row(registrationForm.adresse, {
+                    label: 'Adresse'
+                    }) }}
+                    <span id="erreurAdresse" class="text-danger"></span>
+                </div>
+                <div class="w-100 mt-3">
+                    {{ form_row(registrationForm.ville, {
+                    label: 'Ville'
+                    }) }}
+                    <span id="erreurVille" class="text-danger"></span>
+                </div>
+                <div class="w-100 mt-3">
+                    {{ form_row(registrationForm.cp) }}
+                    <span id="erreurCode" class="text-danger"></span>
+                </div>
+                <div class="w-100 mt-3">
+                    {{ form_row(registrationForm.plainPassword, {
+                    label: 'Password'
+                    }) }}
+                    <span id="erreurPassword" class="text-danger"></span>
+                </div>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'mot de passe'
-        }) }}
+                <div class="d-flex mt-5 mb-4">
+                    <button type="submit" class="btn btn-light">Enregistre</button>
+                    <a href="{{ path('app_login') }}" class="btn btn-light ms-4">déjà un compte</a>
+                </div>
+            </div>
 
-        {{ form_row(registrationForm.agreeTerms) }}
-
-        <button  type="submit" class="btn btn-dark">s'enregistrer</button>
-    {{ form_end(registrationForm) }}
-    
+            {{ form_end(registrationForm) }}
+        </div>
+    </div>
+</div>
 {% endblock %}
