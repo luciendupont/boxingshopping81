@@ -107,3 +107,6 @@ document.getElementById('registration').addEventListener('submit', function(e){
         return true;
     }
 })
+
+
+

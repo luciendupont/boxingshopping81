@@ -11,24 +11,30 @@
 
         {% for short in shorts %}
 
-        <div class="col-6">
 
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="boxe/article/{{short.imageArticle}}" alt="Card image cap">
-                <h2>{{ short.nomArticle }}</h2>
-                <br>
-                <p><b></b> {{ short.descriptionArticle }}</p>
-                <br class="nbr">
-                <p><b> marque:</b> {{ short.marqueArticle }}</p>
 
-            </div>
-            <div class="col-lg-5 align-self-center">
-                <p class="fs-lg-1 fs-3"> <b>Prix :</b> {{ short.prixArticle }}€</p>
-                <button type="button" class="btn btn-light" li class="nav-item">
+
+
+
+
+<div class="card mb-3 " with="auto">
+    <div class="row align-items-center">
+      <div class="col-4">
+        <img src="boxe/article/{{short.imageArticle}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ short.nomArticle }}</h5>
+          <p class="card-text">{{ short.descriptionArticle }}</p>
+          <p class="card-text"> marque:{{ short.marqueArticle }}</p>
+          <p class="card-text">Prix :{{ short.prixArticle }}€</p>
+          <button type="button" class="btn btn-light" li class="nav-item">
                     <a class="nav-link" href="{{path('app_panier_add',{'id':short.id})}}">commandez</a></button>
-            </div>
-        </div>
-   
-
+       </div>
+      </div>
+    </div>
+  </div>
 {% endfor %}
+    </div>
+</div>
 {% endblock %}

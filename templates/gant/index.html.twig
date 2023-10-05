@@ -12,23 +12,31 @@
 
         {% for gant in gants %}
 
-        <div class="col-6">
 
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="boxe/article/{{gant.imageArticle}}" alt="Card image cap">
-                <h2>{{ gant.nomArticle }}</h2>
-                <br>
-                <p><b></b> {{ gant.descriptionArticle }}</p>
-                <br class="nbr">
-                <p><b> marque:</b> {{ gant.marqueArticle }}</p>
 
-            </div>
-            <div class="col-lg-5 align-self-center">
-                <p class="fs-lg-1 fs-3"> <b>Prix :</b> {{ gant.prixArticle }}€</p>
-                <button type="button" class="btn btn-light" li class="nav-item">
+
+
+
+
+<div class="card mb-3 " with="auto">
+    <div class="row align-items-center">
+      <div class="col-4">
+        <img src="boxe/article/{{gant.imageArticle}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ gant.nomArticle }}</h5>
+          <p class="card-text">{{ gant.descriptionArticle }}</p>
+          <p class="card-text"> marque:{{ gant.marqueArticle }}</p>
+          <p class="card-text">Prix :{{ gant.prixArticle }}€</p>
+          <button type="button" class="btn btn-light" li class="nav-item">
                     <a class="nav-link" href="{{path('app_panier_add',{'id':gant.id})}}">commandez</a></button>
-            </div>
-        </div>
-   
+       </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+    </div>
+</div>
 
-{% endfor %}{% endblock %}
+{% endblock %}
