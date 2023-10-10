@@ -76,6 +76,14 @@
                 
               </div>
 
+              {% if app.user %}
+              <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <a href="{{path('app_profil',{'id': app.user.id})}}" class="btn btn-light">profil</a>
+                
+              </div>
+              {% endif %}
+              
+
               <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                 <a href="{{path("app_panier")}}" class="btn btn-light">                    <i class='bx bxs-cart fs-4'>panier</i>
 </a>

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil utilisateur{% endblock %}
+
+{% block body %}
+<div class="row d-flex justify-content-center mt-5">
+    <div class="col-6 bg-light-subtle">
+        <div class="d-flex justify-content-center">
+           <div>
+                <h1>profil utilisateur</h1>
+                <div class="mt-5 row d-flex justify-content-center">
+                    <p class="col-10 "><b>Nom :</b> {{ user.nom}}</p>
+                    <p class="col-10"><b>Prenom :</b> {{ user.prenom}}</p>
+                    <p class="col-10"><b>Email :</b> {{ user.email }}</p>
+                    <p class="col-10"><b>telepĥone:</b> {{ user.telephone}}</p>
+                    <p class="col-10"><b>adresse:</b> {{ user.adresse}}</p>
+                    <p class="col-10"><b>codepostal:</b> {{ user.cp}}</p>
+                    <p class="col-10"><b>ville:</b> {{ user.ville}}</p>
+                    <a href="{{ path('app_profil_modif', {'id': user.id}) }}" class="btn btn-light mb-5 col-10">Modifier</a>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

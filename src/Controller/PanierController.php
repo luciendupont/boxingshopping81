@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Commande;
-use App\Entity\Detail;
+use App\Entity\Contient;
 use App\Service\PanierService;
 use App\Service\MailService;
 use App\Repository\ArticleRepository;
@@ -36,26 +36,28 @@ class PanierController extends AbstractController
         {
             $article = $articleRepository->find($id);
             
-            $detail = new Detail();
-            $detail->addArticle($article)
-                ->setQuantite($quantite);
-            $em->persist($detail);
+            $Contient = new Contient();
+            $Contient->setArticle($article)
+                ->setQuantité($quantite);
+            $em->persist($Contient);
 
             
-            $article->setDetail($detail);
-            $commande->setDetail($detail);
+            $article->addContient($Contient);
+            $commande->addContient($Contient);
             $total = $total + ($article->getPrixArticle() * $quantite);
         }
         
         $commande->setTotal($total)
             ->setEtat(0)
             ->setDateCommande(new \DateTimeImmutable())
+            ->setNomCommande($this->getUser()->getNom())
+            ->setDescriptionCommande($article->getNomArticle())
             ->setUser($this->getUser());
         $em->persist($commande);
 
         $em->flush();
 
-        return $this->redirectToRoute('app_home');
+        return $this->redirectToRoute('app_index');
     }
 
     #[Route('/mon-panier/add/{id<\d+>}', name: 'app_panier_add')]
